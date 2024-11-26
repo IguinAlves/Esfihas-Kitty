@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Loja de Esfihas </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header> 
+        <div class="logo-container">
+            <img src="img/Logo-kitty.png" alt="LogoKitty" class="logo">
+        <h1>Esfihas Kitty</h1>
+        </div>
+        <nav>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Sobre nós</a>
+            <a href="#contato">Contato</a>
+
+            <img id="abrir-carrinho" src="img/Carrinho.png" alt="Carrinho" class="icone-carrinho">
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Bem-vindo à Esfihas Kitty</h2>
+            <p>Delicie-se com nossas esfihas fresquinhas e cheias de sabor.</p>
+            <a href="#cardapio" class="btn">Peça Agora</a>
+        </section>
+
+        <section id="cardapio">
+            <h2>Nosso Cardápio</h2>
+            <div class="esfihas">
+                <div class="esfiha">
+                    <img src="" alt="">
+                    <h3>Carne</h3>
+                    <p>R$6,00</p>
+                    <button onclick="adicionarAoCarrinho('Esfiha de Carne', 6)">Adicionar</button>
+                </div>
+                <div class="esfiha">
+                    <img src="" alt="">
+                    <h3>Pizza</h3>
+                    <p>R$6,00</p>
+                    <button onclick="adicionarAoCarrinho('Esfiha de Pizza', 6)">Adcionar</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="sobre">
+            <div class="sobre-container">
+                <h2>Sobre Nós</h2>
+                <div class="conteudo">
+                    <div class="texto">
+                        <p>
+                            A Esfihas Kitty nasceu da paixão por comida artesanal e pelo desejo de oferecer um sabor único e aconchegante a todos os nossos clientes. Fundada em 2010, nossa história começa com uma pequena loja no coração da cidade, onde a cozinha de uma avó se tornou o ponto de partida para uma marca que conquistaria o paladar de muitos.
+
+                            Desde o início, nos dedicamos a criar esfihas frescas e saborosas, utilizando apenas os melhores ingredientes. A ideia era criar um espaço onde as pessoas pudessem saborear não só a comida, mas também a experiência de sentir-se em casa, com uma refeição feita com todo o cuidado e amor.
+                        </p>
+                    </div>
+                    <div class="imagem">
+                        <img src="img/esfiha-carne.jpg" alt="Deliciosa Esfiha">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2> Entre em Contato</h2>
+            <div class="contato-conteudo">
+                <img src="img/Zap.png" alt="Icone Zap" class="icone-contato">
+                <p>Entre em contato conosco para pedidos ou dúvidas. Estamos à disposição!</p>
+                <p>(18) 99667-2637</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="carrinho-modal" class="modal">
+        <div class="modal-content">
+            <span id="fechar-carrinho" class="close">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <ul id="itens-carrinho"></ul>
+            <p id="total-carrinho">Total: R$ 0,00</p>
+            <button class="btn" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Esfihas Kitty. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
